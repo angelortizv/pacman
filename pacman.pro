@@ -28,17 +28,20 @@ SOURCES += \
         main.cpp \
         src/mainwindow.cpp \
         src/highscores.cpp \
-    src/game.cpp
+    src/game.cpp \
+    src/gameover.cpp
 
 HEADERS += \
         src/mainwindow.h \
         src/highscores.h \
-    src/game.h
+    src/game.h \
+    src/gameover.h
 
 FORMS += \
         src/mainwindow.ui \
         src/highscores.ui \
-    src/game.ui
+    src/game.ui \
+    src/gameover.ui
 
 RESOURCES += \
         imgresources.qrc

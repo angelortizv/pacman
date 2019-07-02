@@ -19,3 +19,11 @@ void Game::livesManager(){
     if(live == 2){ui->livesCounter->setStyleSheet("image: url(:/img/lives_2);");}
     if(live == 1){ui->livesCounter->setStyleSheet("image: url(:/img/lives_1);");}
 }
+
+void Game::on_testButton_clicked()
+{
+    close();
+    GameOver gameover;
+    gameover.setModal(true);
+    gameover.exec();
+}

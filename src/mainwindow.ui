@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="../imgresources.qrc">
-    <normaloff>:/img/game_icon.png</normaloff>:/img/game_icon.png</iconset>
+    <normaloff>:/img/pacman/1.png</normaloff>:/img/pacman/1.png</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QLabel" name="background_label">

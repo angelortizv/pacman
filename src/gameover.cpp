@@ -23,6 +23,7 @@ void GameOver::loadUI(){
     ui->label_4->setFont(QFont(font_family, font_size));
     ui->goback_button->setFont(QFont(font_family, font_size));
     ui->ok_button->setFont(QFont(font_family, font_size));
+    ui->textEdit->setFont(QFont(font_family, font_size));
 }
 
 void GameOver::on_goback_button_clicked()

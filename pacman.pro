@@ -26,16 +26,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp \
-    highscores.cpp
+        src/mainwindow.cpp \
+        src/highscores.cpp
 
 HEADERS += \
-        mainwindow.h \
-    highscores.h
+        src/mainwindow.h \
+        src/highscores.h
 
 FORMS += \
-        mainwindow.ui \
-    highscores.ui
+        src/mainwindow.ui \
+        src/highscores.ui
 
 RESOURCES += \
-    imgresources.qrc
+        imgresources.qrc

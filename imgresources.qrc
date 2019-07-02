@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/background</file>
+        <file>img/pacman_logo</file>
+        <file>img/initial_gif.gif</file>
+        <file>img/playgame.png</file>
+        <file>img/highscores.png</file>
+        <file>img/game_icon.png</file>
+    </qresource>
+</RCC>

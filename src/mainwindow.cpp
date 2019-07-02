@@ -27,3 +27,11 @@ void MainWindow::on_highscores_button_clicked()
     highscores.setModal(true);
     highscores.exec();
 }
+
+void MainWindow::on_playgame_button_clicked()
+{
+    close();
+    Game game;
+    game.setModal(true);
+    game.exec();
+}

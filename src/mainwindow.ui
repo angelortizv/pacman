@@ -14,7 +14,7 @@
    <string>Home | Pacman</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="imgresources.qrc">
+   <iconset resource="../imgresources.qrc">
     <normaloff>:/img/game_icon.png</normaloff>:/img/game_icon.png</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
@@ -118,7 +118,7 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="imgresources.qrc"/>
+  <include location="../imgresources.qrc"/>
  </resources>
  <connections/>
 </ui>

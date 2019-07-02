@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QMovie>
 #include "highscores.h"
+#include "game.h"
 
 namespace Ui {
 class MainWindow;
@@ -19,6 +20,8 @@ public:
 
 private slots:
     void on_highscores_button_clicked();
+
+    void on_playgame_button_clicked();
 
 private:
     Ui::MainWindow *ui;

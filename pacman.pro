@@ -38,7 +38,9 @@ SOURCES += \
     src/game/entities/pacman.cpp \
     src/game/entities/pinky.cpp \
     src/game/animaterect.cpp \
-    src/game/dashboard.cpp
+    src/game/dashboard.cpp \
+    src/game/entities/pellet.cpp \
+    src/game/entities/dot.cpp
 
 HEADERS += \
         src/mainwindow.h \
@@ -54,7 +56,10 @@ HEADERS += \
     src/game/entities/pacman.h \
     src/game/entities/pinky.h \
     src/game/animaterect.h \
-    src/game/dashboard.h
+    src/game/dashboard.h \
+    src/game/entities/pellet.h \
+    src/game/entities/item.h \
+    src/game/entities/dot.h
 
 FORMS += \
         src/mainwindow.ui \

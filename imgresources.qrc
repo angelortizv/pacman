@@ -3,9 +3,10 @@
         <file>img/background</file>
         <file>img/pacman_logo</file>
         <file>img/initial_gif.gif</file>
-        <file>img/playgame.png</file>
-        <file>img/highscores.png</file>
         <file>img/game_icon.png</file>
-        <file>img/goback.png</file>
+        <file>img/lives_3.png</file>
+        <file>img/lives_2.png</file>
+        <file>img/lives_1.png</file>
+        <file>img/strawberry.png</file>
     </qresource>
 </RCC>

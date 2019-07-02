@@ -33,6 +33,89 @@
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="label_score">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>490</y>
+     <width>111</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 27pt &quot;Capture it&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>SCORE</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_lives">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>490</y>
+     <width>111</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 27pt &quot;Capture it&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>LIVES</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="scoreCounter">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>490</y>
+     <width>51</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 27pt &quot;Capture it&quot;;
+color: rgb(252, 233, 79);</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="livesCounter">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>500</y>
+     <width>101</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/img/lives_3.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="strawberryCounter">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>515</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/img/strawberry.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
  </widget>
  <resources>
   <include location="../imgresources.qrc"/>

@@ -66,52 +66,58 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="highscores_button">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>400</y>
-      <width>111</width>
-      <height>41</height>
+      <x>320</x>
+      <y>560</y>
+      <width>151</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/img/highscores.png);</string>
+     <string notr="true">font: 75 8pt &quot;Capture it&quot;;
+background-color: rgba(0, 0, 0, 128);
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string/>
+     <string>Developed by angelortizv</string>
     </property>
    </widget>
    <widget class="QPushButton" name="playgame_button">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>340</y>
-      <width>111</width>
-      <height>41</height>
+      <x>300</x>
+      <y>330</y>
+      <width>181</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/img/playgame.png);</string>
+     <string notr="true">font: 75 22pt &quot;Capture it&quot;;
+background-color: rgba(0, 0, 0, 128);
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string/>
+     <string>PLAY GAME</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QPushButton" name="highscores_button">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>560</y>
-      <width>141</width>
-      <height>20</height>
+      <x>297</x>
+      <y>390</y>
+      <width>191</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true">font: 75 22pt &quot;Capture it&quot;;
+background-color: rgba(0, 0, 0, 128);
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>Developed by angelortizv</string>
+     <string>HIGH SCORES</string>
     </property>
    </widget>
   </widget>

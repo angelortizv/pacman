@@ -17,6 +17,9 @@ public:
 
 private:
     Ui::Game *ui;
+    int live = 3;
+
+    void livesManager();
 };
 
 #endif // GAME_H

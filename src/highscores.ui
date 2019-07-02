@@ -38,15 +38,17 @@
     <rect>
      <x>340</x>
      <y>480</y>
-     <width>111</width>
+     <width>131</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/img/goback.png);</string>
+    <string notr="true">font: 75 22pt &quot;Capture it&quot;;
+background-color: rgba(0, 0, 0, 128);
+color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string/>
+    <string>GO BACK</string>
    </property>
   </widget>
  </widget>

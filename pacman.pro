@@ -44,4 +44,5 @@ FORMS += \
     src/gameover.ui
 
 RESOURCES += \
-        imgresources.qrc
+        imgresources.qrc \
+    audioresources.qrc

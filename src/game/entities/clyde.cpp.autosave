@@ -19,7 +19,7 @@ QPoint Clyde::setTarget() {
     } else{
         target = QPoint(27, 1);
     }
-   return target;
+    return target;
 }
 
 void Clyde::sendOut() {

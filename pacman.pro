@@ -36,7 +36,9 @@ SOURCES += \
     src/game/entities/clyde.cpp \
     src/game/entities/inky.cpp \
     src/game/entities/pacman.cpp \
-    src/game/entities/pinky.cpp
+    src/game/entities/pinky.cpp \
+    src/game/animaterect.cpp \
+    src/game/dashboard.cpp
 
 HEADERS += \
         src/mainwindow.h \
@@ -50,7 +52,9 @@ HEADERS += \
     src/game/entities/clyde.h \
     src/game/entities/inky.h \
     src/game/entities/pacman.h \
-    src/game/entities/pinky.h
+    src/game/entities/pinky.h \
+    src/game/animaterect.h \
+    src/game/dashboard.h
 
 FORMS += \
         src/mainwindow.ui \

@@ -29,13 +29,28 @@ SOURCES += \
         src/mainwindow.cpp \
         src/highscores.cpp \
     src/game.cpp \
-    src/gameover.cpp
+    src/gameover.cpp \
+    src/game/entities/ghost.cpp \
+    src/game/compass.cpp \
+    src/game/entities/blinky.cpp \
+    src/game/entities/clyde.cpp \
+    src/game/entities/inky.cpp \
+    src/game/entities/pacman.cpp \
+    src/game/entities/pinky.cpp
 
 HEADERS += \
         src/mainwindow.h \
         src/highscores.h \
     src/game.h \
-    src/gameover.h
+    src/gameover.h \
+    src/game/entities/character.h \
+    src/game/entities/ghost.h \
+    src/game/compass.h \
+    src/game/entities/blinky.h \
+    src/game/entities/clyde.h \
+    src/game/entities/inky.h \
+    src/game/entities/pacman.h \
+    src/game/entities/pinky.h
 
 FORMS += \
         src/mainwindow.ui \

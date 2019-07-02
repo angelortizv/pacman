@@ -8,5 +8,6 @@
         <file>img/lives_2.png</file>
         <file>img/lives_1.png</file>
         <file>img/strawberry.png</file>
+        <file>img/main_sprite.png</file>
     </qresource>
 </RCC>

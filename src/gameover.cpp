@@ -28,8 +28,16 @@ void GameOver::loadUI(){
 
 void GameOver::on_goback_button_clicked()
 {
-    close();
+    this->close();
     MainWindow *w = new MainWindow();
     w->show();
 }
 
+
+void GameOver::on_ok_button_clicked()
+{
+    this->close();
+    HighScores scores;
+    scores.setModal(true);
+    scores.exec();
+}

@@ -2,12 +2,12 @@
 #define PELLET_H
 
 #include "item.h"
-#include "../../game.h"
+#include "../../gameaux.h"
 
 class Pellet: public Item {
     Q_OBJECT
 public:
-    Pellet(Game *parent_ipt);
+    Pellet(GameAux *parent_ipt);
 
     void eaten();
 
@@ -18,7 +18,7 @@ public slots:
     void shine();
 
 private:
-    Game *parent;
+    GameAux *parent;
     bool visible;
 };
 

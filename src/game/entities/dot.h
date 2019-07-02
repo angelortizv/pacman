@@ -1,14 +1,13 @@
 #ifndef DOT_H
 #define DOT_H
 
-#include <QObject>
 #include "item.h"
-#include "../../game.h"
+#include "../../gameaux.h"
 
 class Dot: public Item {
     Q_OBJECT
 public:
-    Dot(Game *parent_ipt);
+    Dot(GameAux *parent_ipt);
 
     void eaten();
     void shine();
@@ -17,7 +16,7 @@ signals:
     void dotEaten();
 
 private:
-    Game *parent;
+    GameAux *parent;
 };
 
 #endif // DOT_H

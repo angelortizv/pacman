@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QMovie>
 #include "mainwindow.h"
+#include "highscores.h"
 
 namespace Ui {
 class GameOver;
@@ -19,6 +20,8 @@ public:
 
 private slots:
     void on_goback_button_clicked();
+
+    void on_ok_button_clicked();
 
 private:
     Ui::GameOver *ui;

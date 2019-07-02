@@ -22,6 +22,7 @@ void MainWindow::loadUI(){
     QFontDatabase::addApplicationFont(":/font/pixel.ttf");
     ui->playgame_button->setFont(QFont(font_family, font_size));
     ui->highscores_button->setFont(QFont(font_family, font_size));
+    ui->quit_button->setFont(QFont(font_family, font_size));
     ui->developer_label->setFont(QFont(font_family, font_size_2));
 
 }
@@ -37,7 +38,15 @@ void MainWindow::on_highscores_button_clicked()
 void MainWindow::on_playgame_button_clicked()
 {
     close();
-    Game game;
-    game.setModal(true);
-    game.exec();
+//    Game game;
+//    game.setModal(true);
+//    game.exec();
+    GameAux *game = new GameAux();
+    game->gameStart();
+    game->show();
+}
+
+void MainWindow::on_quit_button_clicked()
+{
+    this->close();
 }

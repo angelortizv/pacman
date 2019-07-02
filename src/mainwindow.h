@@ -6,6 +6,7 @@
 #include <QFontDatabase>
 #include "highscores.h"
 #include "game.h"
+#include "gameaux.h"
 
 namespace Ui {
 class MainWindow;
@@ -23,6 +24,8 @@ private slots:
     void on_highscores_button_clicked();
 
     void on_playgame_button_clicked();
+
+    void on_quit_button_clicked();
 
 private:
     Ui::MainWindow *ui;

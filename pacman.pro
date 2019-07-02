@@ -40,7 +40,9 @@ SOURCES += \
     src/game/animaterect.cpp \
     src/game/dashboard.cpp \
     src/game/entities/pellet.cpp \
-    src/game/entities/dot.cpp
+    src/game/entities/dot.cpp \
+    src/game/button.cpp \
+    src/gameaux.cpp
 
 HEADERS += \
         src/mainwindow.h \
@@ -59,7 +61,9 @@ HEADERS += \
     src/game/dashboard.h \
     src/game/entities/pellet.h \
     src/game/entities/item.h \
-    src/game/entities/dot.h
+    src/game/entities/dot.h \
+    src/game/button.h \
+    src/gameaux.h
 
 FORMS += \
         src/mainwindow.ui \

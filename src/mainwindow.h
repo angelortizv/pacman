@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QMovie>
+#include <QFontDatabase>
 #include "highscores.h"
 #include "game.h"
 
@@ -25,7 +26,11 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    void loadGif();
+    static const int font_size = 15;
+    static const int font_size_2 = 8;
+    const QString font_family = "Joystix";
+
+    void loadUI();
 };
 
 #endif // MAINWINDOW_H

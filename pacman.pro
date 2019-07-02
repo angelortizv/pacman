@@ -45,4 +45,5 @@ FORMS += \
 
 RESOURCES += \
         imgresources.qrc \
-    audioresources.qrc
+    audioresources.qrc \
+    fontresources.qrc

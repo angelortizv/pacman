@@ -21,9 +21,10 @@ private slots:
 
 private:
     Ui::Game *ui;
-    int live = 3;
-
-    void livesManager();
+    static const int font_size = 20;
+    static const int font_size_2 = 8;
+    const QString font_family = "Joystix";
+    void loadUI();
 };
 
 #endif // GAME_H

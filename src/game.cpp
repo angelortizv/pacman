@@ -6,7 +6,7 @@ Game::Game(QWidget *parent) :
     ui(new Ui::Game)
 {
     ui->setupUi(this);
-    livesManager();
+    loadUI();
 }
 
 Game::~Game()
@@ -14,10 +14,11 @@ Game::~Game()
     delete ui;
 }
 
-void Game::livesManager(){
-    if(live == 3){ui->livesCounter->setStyleSheet("image: url(:/img/lives_3);");}
-    if(live == 2){ui->livesCounter->setStyleSheet("image: url(:/img/lives_2);");}
-    if(live == 1){ui->livesCounter->setStyleSheet("image: url(:/img/lives_1);");}
+void Game::loadUI(){
+    QFontDatabase::addApplicationFont(":/font/pixel.ttf");
+    ui->scoreCounter->setFont(QFont(font_family, font_size));
+    ui->label_lives->setFont(QFont(font_family, font_size));
+    ui->label_score->setFont(QFont(font_family, font_size));
 }
 
 void Game::on_testButton_clicked()

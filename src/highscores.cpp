@@ -6,11 +6,17 @@ HighScores::HighScores(QWidget *parent) :
     ui(new Ui::HighScores)
 {
     ui->setupUi(this);
+    loadUI();
 }
 
 HighScores::~HighScores()
 {
     delete ui;
+}
+
+void HighScores::loadUI(){
+    QFontDatabase::addApplicationFont(":/font/pixel.ttf");
+    ui->goback_button->setFont(QFont(font_family, font_size));
 }
 
 void HighScores::on_goback_button_clicked()

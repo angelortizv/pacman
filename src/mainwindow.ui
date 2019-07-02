@@ -66,18 +66,17 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="developer_label">
     <property name="geometry">
      <rect>
-      <x>320</x>
+      <x>280</x>
       <y>560</y>
-      <width>151</width>
+      <width>241</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 8pt &quot;Capture it&quot;;
-background-color: rgba(0, 0, 0, 128);
+     <string notr="true">background-color: rgba(0, 0, 0, 128);
 color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
@@ -94,8 +93,7 @@ color: rgb(255, 255, 255);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 22pt &quot;Capture it&quot;;
-background-color: rgba(0, 0, 0, 128);
+     <string notr="true">background-color: rgba(0, 0, 0, 128);
 color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
@@ -112,7 +110,7 @@ color: rgb(255, 255, 255);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 22pt &quot;Capture it&quot;;
+     <string notr="true">
 background-color: rgba(0, 0, 0, 128);
 color: rgb(255, 255, 255);</string>
     </property>

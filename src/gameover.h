@@ -22,7 +22,10 @@ private slots:
 
 private:
     Ui::GameOver *ui;
-    void loadGif();
+    static const int font_size = 15;
+    static const int font_size_2 = 8;
+    const QString font_family = "Joystix";
+    void loadUI();
 };
 
 #endif // GAMEOVER_H

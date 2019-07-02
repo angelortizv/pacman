@@ -43,8 +43,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 75 22pt &quot;Capture it&quot;;
-background-color: rgba(0, 0, 0, 128);
+    <string notr="true">background-color: rgba(0, 0, 0, 128);
 color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">

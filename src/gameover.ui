@@ -59,8 +59,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 75 23pt &quot;Capture it&quot;;
-color: rgb(255, 255, 0);</string>
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>ENTER YOUR NAME,</string>
@@ -76,8 +75,7 @@ color: rgb(255, 255, 0);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 75 23pt &quot;Capture it&quot;;
-color: rgb(255, 255, 0);</string>
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>HIGH SCORER!</string>
@@ -103,8 +101,7 @@ color: rgb(255, 255, 0);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 75 22pt &quot;Capture it&quot;;
-background-color: rgba(0, 0, 0, 128);
+    <string notr="true">background-color: rgba(0, 0, 0, 128);
 color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
@@ -121,8 +118,7 @@ color: rgb(255, 255, 255);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 75 22pt &quot;Capture it&quot;;
-background-color: rgba(0, 0, 0, 128);
+    <string notr="true">background-color: rgba(0, 0, 0, 128);
 color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">

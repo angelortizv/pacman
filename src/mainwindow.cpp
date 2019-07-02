@@ -6,7 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    loadGif();
+    loadUI();
 }
 
 MainWindow::~MainWindow()
@@ -14,10 +14,16 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::loadGif(){
+void MainWindow::loadUI(){
     QMovie *movie=new QMovie(":/img/initial_gif.gif");
     ui->initial_gif_label->setMovie(movie);
     movie->start();
+
+    QFontDatabase::addApplicationFont(":/font/pixel.ttf");
+    ui->playgame_button->setFont(QFont(font_family, font_size));
+    ui->highscores_button->setFont(QFont(font_family, font_size));
+    ui->developer_label->setFont(QFont(font_family, font_size_2));
+
 }
 
 void MainWindow::on_highscores_button_clicked()

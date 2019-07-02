@@ -19,3 +19,11 @@ void MainWindow::loadGif(){
     ui->initial_gif_label->setMovie(movie);
     movie->start();
 }
+
+void MainWindow::on_highscores_button_clicked()
+{
+    close();
+    HighScores highscores;
+    highscores.setModal(true);
+    highscores.exec();
+}

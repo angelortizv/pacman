@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HighScores</class>
+ <widget class="QWidget" name="HighScores">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>High Scores | Pacman</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="imgresources.qrc">
+    <normaloff>:/img/game_icon.png</normaloff>:/img/game_icon.png</iconset>
+  </property>
+  <widget class="QLabel" name="background_label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>600</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/img/background);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="goback_button">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>480</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/img/goback.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="imgresources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

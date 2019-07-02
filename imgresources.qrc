@@ -6,5 +6,6 @@
         <file>img/playgame.png</file>
         <file>img/highscores.png</file>
         <file>img/game_icon.png</file>
+        <file>img/goback.png</file>
     </qresource>
 </RCC>

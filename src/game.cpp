@@ -1,13 +1,10 @@
 #include "game.h"
-//#include "ui_game.h"
 #include "game/entities/pacman.h"
 #include "game/entities/dot.h"
 #include "game/entities/pellet.h"
 
 Game::Game()
-//    ui(new Ui::Game)
 {
-//    ui->setupUi(this);
     loadUI();
     loadGameEntities();
 }

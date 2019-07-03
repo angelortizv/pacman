@@ -66,7 +66,6 @@ HEADERS += \
 FORMS += \
         src/mainwindow.ui \
         src/highscores.ui \
-        src/game.ui \
         src/gameover.ui
 
 RESOURCES += \

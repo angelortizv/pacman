@@ -24,10 +24,6 @@
 
 #include "gameover.h"
 
-//namespace Ui {
-//class Game;
-//}
-
 class Game : public QGraphicsView
 {
     Q_OBJECT
@@ -63,11 +59,9 @@ public slots:
     // end game control
     void gameStart();
     void gameFail();
-    void gamePause();
 
 
 private:
-//    Ui::Game *ui;
     static const int font_size = 20;
     static const int font_size_2 = 8;
     const QString font_family = "Joystix";

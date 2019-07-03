@@ -41,7 +41,8 @@ void MainWindow::on_playgame_button_clicked()
 //    Game game;
 //    game.setModal(true);
 //    game.exec();
-    GameAux *game = new GameAux();
+
+    Game *game = new Game();
     game->gameStart();
     game->show();
 }

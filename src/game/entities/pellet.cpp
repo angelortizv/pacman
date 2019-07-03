@@ -1,6 +1,6 @@
 #include "pellet.h"
 
-Pellet::Pellet(GameAux *parent_ipt) {
+Pellet::Pellet(Game *parent_ipt) {
     parent = parent_ipt;
     setPixmap(QPixmap(":/img/item/pellet.png").scaledToWidth(16));
     visible = true;

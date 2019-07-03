@@ -6,7 +6,6 @@
 #include <QFontDatabase>
 #include "highscores.h"
 #include "game.h"
-#include "gameaux.h"
 
 namespace Ui {
 class MainWindow;

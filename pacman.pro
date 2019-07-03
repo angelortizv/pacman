@@ -28,50 +28,48 @@ SOURCES += \
         main.cpp \
         src/mainwindow.cpp \
         src/highscores.cpp \
-    src/game.cpp \
-    src/gameover.cpp \
-    src/game/entities/ghost.cpp \
-    src/game/compass.cpp \
-    src/game/entities/blinky.cpp \
-    src/game/entities/clyde.cpp \
-    src/game/entities/inky.cpp \
-    src/game/entities/pacman.cpp \
-    src/game/entities/pinky.cpp \
-    src/game/animaterect.cpp \
-    src/game/dashboard.cpp \
-    src/game/entities/pellet.cpp \
-    src/game/entities/dot.cpp \
-    src/game/button.cpp \
-    src/gameaux.cpp
+        src/game.cpp \
+        src/gameover.cpp \
+        src/game/entities/ghost.cpp \
+        src/game/compass.cpp \
+        src/game/entities/blinky.cpp \
+        src/game/entities/clyde.cpp \
+        src/game/entities/inky.cpp \
+        src/game/entities/pacman.cpp \
+        src/game/entities/pinky.cpp \
+        src/game/animaterect.cpp \
+        src/game/dashboard.cpp \
+        src/game/entities/pellet.cpp \
+        src/game/entities/dot.cpp \
+        src/game/button.cpp
 
 HEADERS += \
         src/mainwindow.h \
         src/highscores.h \
-    src/game.h \
-    src/gameover.h \
-    src/game/entities/character.h \
-    src/game/entities/ghost.h \
-    src/game/compass.h \
-    src/game/entities/blinky.h \
-    src/game/entities/clyde.h \
-    src/game/entities/inky.h \
-    src/game/entities/pacman.h \
-    src/game/entities/pinky.h \
-    src/game/animaterect.h \
-    src/game/dashboard.h \
-    src/game/entities/pellet.h \
-    src/game/entities/item.h \
-    src/game/entities/dot.h \
-    src/game/button.h \
-    src/gameaux.h
+        src/game.h \
+        src/gameover.h \
+        src/game/entities/character.h \
+        src/game/entities/ghost.h \
+        src/game/compass.h \
+        src/game/entities/blinky.h \
+        src/game/entities/clyde.h \
+        src/game/entities/inky.h \
+        src/game/entities/pacman.h \
+        src/game/entities/pinky.h \
+        src/game/animaterect.h \
+        src/game/dashboard.h \
+        src/game/entities/pellet.h \
+        src/game/entities/item.h \
+        src/game/entities/dot.h \
+        src/game/button.h
 
 FORMS += \
         src/mainwindow.ui \
         src/highscores.ui \
-    src/game.ui \
-    src/gameover.ui
+        src/game.ui \
+        src/gameover.ui
 
 RESOURCES += \
         imgresources.qrc \
-    audioresources.qrc \
-    fontresources.qrc
+        audioresources.qrc \
+        fontresources.qrc

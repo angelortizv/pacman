@@ -113,17 +113,14 @@
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="testButton">
+  <widget class="QGraphicsView" name="graphicsView">
    <property name="geometry">
     <rect>
-     <x>760</x>
-     <y>560</y>
-     <width>31</width>
-     <height>33</height>
+     <x>20</x>
+     <y>10</y>
+     <width>481</width>
+     <height>581</height>
     </rect>
-   </property>
-   <property name="text">
-    <string>test</string>
    </property>
   </widget>
  </widget>

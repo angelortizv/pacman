@@ -1,6 +1,6 @@
 #include "dot.h"
 
-Dot::Dot(GameAux *parent_ipt) {
+Dot::Dot(Game *parent_ipt) {
     parent = parent_ipt;
     setPixmap(QPixmap(":/img/item/dot.png").scaledToWidth(16));
 }

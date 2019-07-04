@@ -87,6 +87,14 @@ void Game::loadGameEntities(){
     background->setZValue(1);
 
     //Load UI
+
+    title = new QGraphicsTextItem();
+    title->setPlainText("PACMAN");
+    title->setDefaultTextColor(Qt::yellow);
+    title->setFont(QFont(font_family, font_size_title));
+    title->setPos(150,-10);
+    scene->addItem(title);
+
     text_score = new QGraphicsTextItem();
     text_score->setPlainText("SCORE");
     text_score->setDefaultTextColor(Qt::white);

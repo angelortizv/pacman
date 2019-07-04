@@ -136,19 +136,6 @@ color: rgb(255, 255, 255);</string>
      <string>EXIT</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>520</y>
-      <width>88</width>
-      <height>33</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

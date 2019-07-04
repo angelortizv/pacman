@@ -48,10 +48,3 @@ void MainWindow::on_quit_button_clicked()
 {
     this->close();
 }
-
-void MainWindow::on_pushButton_clicked()
-{
-    Winner win;
-    win.setModal(true);
-    win.exec();
-}

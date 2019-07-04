@@ -27,7 +27,7 @@ void GameOver::loadUI(){
     ui->yourscore_label->setFont(QFont(font_family, font_size_2));
     ui->editable->setFont(QFont(font_family, font_size_2));
 //    ui->editable->setText(board->getScore());
-    qDebug() << "";
+    qDebug() << board->getScore();
 }
 
 void GameOver::on_goback_button_clicked()

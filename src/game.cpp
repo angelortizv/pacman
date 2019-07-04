@@ -357,6 +357,10 @@ void Game::gameFail() {
     clearDots();
     background->fadeIn();
 
+    int score = board->getScore();
+//    connect(score, )
+//    connect(uploadFiles, &QAction::, this, &GameOver::loadUI);
+
     QTimer *waitingToClose = new QTimer(this);
     waitingToClose->setSingleShot(true);
     connect(waitingToClose, SIGNAL(timeout()), this, SLOT(stopAndShutdown()));

@@ -13,7 +13,7 @@
 
 #include "game/compass.h"
 #include "game/dashboard.h"
-#include "game/button.h"
+//#include "game/button.h"
 #include "game/animaterect.h"
 
 #include "game/entities/character.h"

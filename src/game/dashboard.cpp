@@ -51,3 +51,13 @@ int Dashboard::getScore() {
 int Dashboard::getHighScore() {
     return high;
 }
+
+int Dashboard::getLives() const
+{
+    return lives;
+}
+
+void Dashboard::setLives(int value)
+{
+    lives = value;
+}

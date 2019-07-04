@@ -62,14 +62,17 @@ public slots:
 
 
 private:
-    static const int font_size = 20;
-    static const int font_size_2 = 8;
+    static const int font_size = 18;
+    static const int font_size_2 = 15;
     const QString font_family = "Joystix";
-    void loadUI();
     void loadGameEntities();
     void refreshScore(int score);
+    void refreshLives(int lives);
     QGraphicsTextItem *text_score;
     QGraphicsTextItem *editable_score;
+    QGraphicsTextItem *text_lives;
+    QGraphicsPixmapItem *editable_lives;
+    QGraphicsPixmapItem *editable_cherry;
 
     const int width = 448;
     const int height = 564;

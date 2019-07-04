@@ -8,18 +8,7 @@ Game::Game()
     this->setWindowTitle("Game | Pacman");
     this->setWindowIcon(QPixmap(":/img/pacman/1.png"));
     this->setFixedSize(width+5, 600);
-    loadUI();
     loadGameEntities();
-}
-
-void Game::loadUI(){
-    QFontDatabase::addApplicationFont(":/font/pixel.ttf");
-//    text_score = new QGraphicsTextItem();
-//    text_score->setPlainText("SCORE");
-//    text_score->setDefaultTextColor(Qt::white);
-//    text_score->setFont(QFont(font_family, font_size));
-//    text_score->setPos(224,0);
-
 }
 
 void Game::loadGameEntities(){
@@ -102,15 +91,33 @@ void Game::loadGameEntities(){
     text_score->setPlainText("SCORE");
     text_score->setDefaultTextColor(Qt::white);
     text_score->setFont(QFont(font_family, font_size));
-    text_score->setPos(0,530);
+    text_score->setPos(0,535);
     scene->addItem(text_score);
+
+    text_lives = new QGraphicsTextItem();
+    text_lives->setPlainText("LIVES");
+    text_lives->setDefaultTextColor(Qt::white);
+    text_lives->setFont(QFont(font_family, font_size));
+    text_lives->setPos(180,535);
+    scene->addItem(text_lives);
 
     editable_score = new QGraphicsTextItem();
     editable_score->setPlainText(QString::number(board->getScore()));
-    editable_score->setDefaultTextColor(Qt::white);
-    editable_score->setFont(QFont(font_family, font_size));
-    editable_score->setPos(120,530);
+    editable_score->setDefaultTextColor(Qt::yellow);
+    editable_score->setFont(QFont(font_family, font_size_2));
+    editable_score->setPos(105,538);
 
+    editable_lives = new QGraphicsPixmapItem();
+    editable_lives->setScale(0.20);
+    editable_lives->setPos(288, 538);
+
+    editable_cherry = new QGraphicsPixmapItem();
+    editable_cherry->setPixmap(QPixmap(":/img/cherry.png"));
+    editable_cherry->setScale(0.90);
+    editable_cherry->setPos(390, 538);
+    scene->addItem(editable_cherry);
+
+    refreshLives(board->getLives());
     refreshScore(board->getScore());
 
     show();
@@ -146,7 +153,6 @@ void Game::putDots() {
         connect(shine, SIGNAL(timeout()), item[pos.x()][pos.y()], SLOT(shine()));
         connect(item[pos.x()][pos.y()], SIGNAL(pelletEaten()), this, SLOT(pelletAte()));
     }
-
 }
 
 void Game::itemEat(QPoint pos) {
@@ -275,4 +281,25 @@ void Game::ghostKill(Ghost *ghost) {
 void Game::refreshScore(int score){
     editable_score->setPlainText(QString::number(board->getScore()));
     scene->addItem(editable_score);
+}
+
+void Game::refreshLives(int lives){
+    switch (lives) {
+    case 3:
+        editable_lives->setPixmap(QPixmap(":/img/lives_3.png"));
+        scene->addItem(editable_lives);
+        break;
+    case 2:
+        editable_lives->setPixmap(QPixmap(":/img/lives_2.png"));
+        scene->addItem(editable_lives);
+        break;
+    case 1:
+        editable_lives->setPixmap(QPixmap(":/img/lives_1.png"));
+        scene->addItem(editable_lives);
+        break;
+    default:
+        editable_lives->setPixmap(QPixmap(":/img/lives_3.png"));
+        scene->addItem(editable_lives);
+        break;
+    }
 }

@@ -5,9 +5,11 @@
 #include <QDialog>
 #include <QKeyEvent>
 #include <QTimer>
+#include <unistd.h>
 #include <QGraphicsPixmapItem>
 #include <QDebug>
 #include <QEventLoop>
+#include <QMediaPlayer>
 
 #include "game/compass.h"
 #include "game/dashboard.h"
@@ -57,13 +59,19 @@ public slots:
     void ghostKill(Ghost *ghost);
 
     // end game control
+    void afterGameStart();
     void gameStart();
     void gameFail();
+
+
+private slots:
+    void stopAndShutdown();
 
 
 private:
     static const int font_size = 18;
     static const int font_size_2 = 15;
+    static const int font_size_3 = 13;
     static const int font_size_title = 22;
     const QString font_family = "Joystix";
 
@@ -76,6 +84,7 @@ private:
     QGraphicsTextItem *text_score;
     QGraphicsTextItem *editable_score;
     QGraphicsTextItem *text_lives;
+    QGraphicsTextItem *get_ready;
     QGraphicsPixmapItem *editable_lives;
     QGraphicsPixmapItem *editable_cherry;
 

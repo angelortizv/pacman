@@ -43,7 +43,7 @@ void MainWindow::on_playgame_button_clicked()
 //    game.exec();
 
     Game *game = new Game();
-    game->gameStart();
+    game->afterGameStart();
     game->show();
 }
 

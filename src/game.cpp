@@ -131,6 +131,13 @@ void Game::loadUI(){
 
     refreshLives(board->getLives());
     refreshScore(board->getScore());
+
+    get_ready = new QGraphicsTextItem();
+    get_ready->setPlainText("GET READY!");
+    get_ready->setDefaultTextColor(Qt::white);
+    get_ready->setFont(QFont(font_family, font_size_3));
+    get_ready->setPos(152,300);
+
 }
 
 void Game::keyPressEvent(QKeyEvent *event) {
@@ -209,9 +216,26 @@ void Game::pelletAte() {
     times = 0;
 }
 
+void Game::afterGameStart(){
+    QMediaPlayer* openning = new QMediaPlayer;
+    openning->setMedia(QUrl("qrc:/audio/pacman_beginning.wav"));
+    openning->setVolume(100);
+    openning->play();
+
+    scene->addItem(get_ready);
+
+    QTimer *waitingToStart = new QTimer(this);
+    waitingToStart->setSingleShot(true);
+    connect(waitingToStart, SIGNAL(timeout()), this, SLOT(gameStart()));
+    waitingToStart->start(4000);
+    wait(0.5);
+}
+
 void Game::gameStart() {
     if (mode == Mode::Result)
         background->fadeOut();
+
+
     // change mode
     mode = Mode::Play;
 
@@ -249,10 +273,23 @@ void Game::gameStart() {
 void Game::gameFail() {
     disconnect(lag, SIGNAL(timeout()), this, SLOT(countDown()));
 
+    QMediaPlayer* fail = new QMediaPlayer;
+    fail->setMedia(QUrl("qrc:/audio/pacman_death.wav"));
+    fail->setVolume(100);
+    fail->play();
+
     player->die();
     clearDots();
     background->fadeIn();
 
+    QTimer *waitingToClose = new QTimer(this);
+    waitingToClose->setSingleShot(true);
+    connect(waitingToClose, SIGNAL(timeout()), this, SLOT(stopAndShutdown()));
+    waitingToClose->start(2000);
+    wait(0.5);
+}
+
+void Game::stopAndShutdown(){
     this->close();
     GameOver gameover;
     gameover.setModal(true);

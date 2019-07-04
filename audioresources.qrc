@@ -5,5 +5,6 @@
         <file>audio/pacman_death.wav</file>
         <file>audio/pacman_chomp.wav</file>
         <file>audio/pacman_beginning.wav</file>
+        <file>audio/pacman_simple_homp.wav</file>
     </qresource>
 </RCC>

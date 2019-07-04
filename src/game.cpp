@@ -205,12 +205,24 @@ void Game::resume() {
 }
 
 void Game::dotsAte() {
+    QMediaPlayer* eatDotMusic = new QMediaPlayer;
+    eatDotMusic->setMedia(QUrl("qrc:/audio/pacman_simple_homp.wav"));
+    eatDotMusic->setVolume(100);
+    eatDotMusic->play();
+
+
     board->addScore(10);
     refreshScore(board->getScore());
     remainDots --;
 }
 
 void Game::pelletAte() {
+
+    QMediaPlayer* eatDotMusic = new QMediaPlayer;
+    eatDotMusic->setMedia(QUrl("qrc:/audio/pacman_eatfruit.wav"));
+    eatDotMusic->setVolume(100);
+    eatDotMusic->play();
+
     board->addScore(50);
     refreshScore(board->getScore());
     times = 0;
@@ -232,6 +244,8 @@ void Game::afterGameStart(){
 }
 
 void Game::gameStart() {
+    get_ready->setPlainText("");
+
     if (mode == Mode::Result)
         background->fadeOut();
 
@@ -319,6 +333,11 @@ void Game::countDown() {
 }
 
 void Game::ghostKill(Ghost *ghost) {
+    QMediaPlayer* killer = new QMediaPlayer;
+    killer->setMedia(QUrl("qrc:/audio/pacman_eatghost.wav"));
+    killer->setVolume(100);
+    killer->play();
+
     wait(0.5);
     player->hide();
     ghost->setPixmap(QPixmap(":/img/item/score/" + QString::number(times) + ".png").scaledToHeight(32));

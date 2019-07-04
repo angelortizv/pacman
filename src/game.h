@@ -86,6 +86,7 @@ private:
     QGraphicsTextItem *get_ready;
     QGraphicsPixmapItem *editable_lifes;
     QGraphicsPixmapItem *editable_cherry;
+    QMediaPlayer* less_life;
 
     const int width = 448;
     const int height = 564;

@@ -139,6 +139,10 @@ void Game::loadUI(){
     get_ready->setFont(QFont(font_family, font_size_3));
     get_ready->setPos(152,300);
 
+    less_life = new QMediaPlayer;
+    less_life->setMedia(QUrl("qrc:/audio/pacman_less_life.wav"));
+    less_life->setVolume(100);
+
 }
 
 void Game::keyPressEvent(QKeyEvent *event) {
@@ -164,6 +168,10 @@ void Game::keyPressEvent(QKeyEvent *event) {
             resume();
             background->fadeOut();
             get_ready->setPlainText("");
+            QMediaPlayer* pause = new QMediaPlayer;
+            pause->setMedia(QUrl("qrc:/audio/pacman_extrapac.wav"));
+            pause->setVolume(100);
+            pause->play();
         }
     }
 }
@@ -194,6 +202,12 @@ void Game::itemEat(QPoint pos) {
 }
 
 void Game::pause() {
+    QMediaPlayer* pause = new QMediaPlayer;
+    pause->setMedia(QUrl("qrc:/audio/pacman_extrapac.wav"));
+    pause->setVolume(100);
+    pause->play();
+
+
     pacmanMove->stop();
     ghostMove->stop();
     shine->stop();
@@ -220,11 +234,10 @@ void Game::resume() {
 }
 
 void Game::dotsAte() {
-//    QMediaPlayer* eatDotMusic = new QMediaPlayer;
-//    eatDotMusic->setMedia(QUrl("qrc:/audio/pacman_simple_homp.wav"));
-//    eatDotMusic->setVolume(100);
-//    eatDotMusic->play();
-
+    QMediaPlayer* eatDotMusic = new QMediaPlayer;
+    eatDotMusic->setMedia(QUrl("qrc:/audio/pacman_simple_homp.wav"));
+    eatDotMusic->setVolume(100);
+    eatDotMusic->play();
 
     board->addScore(10);
     refreshScore(board->getScore());
@@ -232,7 +245,6 @@ void Game::dotsAte() {
 }
 
 void Game::pelletAte() {
-
     QMediaPlayer* eatDotMusic = new QMediaPlayer;
     eatDotMusic->setMedia(QUrl("qrc:/audio/pacman_eatfruit.wav"));
     eatDotMusic->setVolume(100);
@@ -244,10 +256,10 @@ void Game::pelletAte() {
 }
 
 void Game::afterGameStart(){
-//    QMediaPlayer* openning = new QMediaPlayer;
-//    openning->setMedia(QUrl("qrc:/audio/pacman_beginning.wav"));
-//    openning->setVolume(100);
-//    openning->play();
+    QMediaPlayer* openning = new QMediaPlayer;
+    openning->setMedia(QUrl("qrc:/audio/pacman_beginning.wav"));
+    openning->setVolume(100);
+    openning->play();
 
     scene->addItem(get_ready);
 
@@ -303,14 +315,17 @@ void Game::lifesManager(){
 
     switch (board->getLifes()) {
     case 3:
+        less_life->play();
         editable_lifes->setPixmap(QPixmap(":/img/lives_3.png"));
         wait(0.5);
         break;
     case 2:
+        less_life->play();
         editable_lifes->setPixmap(QPixmap(":/img/lives_2.png"));
         wait(0.5);
         break;
     case 1:
+        less_life->play();
         editable_lifes->setPixmap(QPixmap(":/img/lives_1.png"));
         wait(0.5);
         break;
@@ -320,6 +335,7 @@ void Game::lifesManager(){
         gameFail();
         break;
     default:
+        less_life->play();
         editable_lifes->setPixmap(QPixmap(":/img/lives_3.png"));
         wait(0.5);
         break;
@@ -329,10 +345,10 @@ void Game::lifesManager(){
 void Game::gameFail() {
     disconnect(lag, SIGNAL(timeout()), this, SLOT(countDown()));
 
-//    QMediaPlayer* fail = new QMediaPlayer;
-//    fail->setMedia(QUrl("qrc:/audio/pacman_death.wav"));
-//    fail->setVolume(100);
-//    fail->play();
+    QMediaPlayer* fail = new QMediaPlayer;
+    fail->setMedia(QUrl("qrc:/audio/pacman_death.wav"));
+    fail->setVolume(100);
+    fail->play();
     get_ready->setPlainText("You lose!");
     player->die();
     clearDots();
@@ -364,7 +380,7 @@ void Game::wait(qreal msec) {
         return;
     mode = Mode::Pause;
     lag->start(int(1000 * msec));
-    pause();
+//    pause();
 }
 
 void Game::countDown() {
@@ -375,10 +391,10 @@ void Game::countDown() {
 }
 
 void Game::ghostKill(Ghost *ghost) {
-//    QMediaPlayer* killer = new QMediaPlayer;
-//    killer->setMedia(QUrl("qrc:/audio/pacman_eatghost.wav"));
-//    killer->setVolume(100);
-//    killer->play();
+    QMediaPlayer* killer = new QMediaPlayer;
+    killer->setMedia(QUrl("qrc:/audio/pacman_eatghost.wav"));
+    killer->setVolume(100);
+    killer->play();
 
     wait(0.5);
     player->hide();

@@ -151,6 +151,20 @@ void Game::keyPressEvent(QKeyEvent *event) {
             player->setDirection(Dir::Left);
         else if ((event->key() == Qt::Key_Right) || (event->key() == Qt::Key_D))
             player->setDirection(Dir::Right);
+        else if(event->key() == Qt::Key_P){
+            mode = Mode::Pause;
+            pause();
+            background->fadeIn();
+            get_ready->setPlainText("GAME PAUSE");
+        }
+    }
+    else if(mode == Mode::Pause){
+        if(event->key() == Qt::Key_P){
+            mode = Mode::Play;
+            resume();
+            background->fadeOut();
+            get_ready->setPlainText("");
+        }
     }
 }
 

@@ -118,7 +118,7 @@ void Pacman::die() {
     dead = true;
     switchTimer->stop();
     setRotation(0);
-//    switchTimer->start(50);
+    switchTimer->start(50);
 //    index = 0;
 //    add = 1;
 }

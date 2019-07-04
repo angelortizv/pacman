@@ -66,9 +66,12 @@ private:
     static const int font_size_2 = 15;
     static const int font_size_title = 22;
     const QString font_family = "Joystix";
+
+    void loadUI();
     void loadGameEntities();
     void refreshScore(int score);
     void refreshLives(int lives);
+
     QGraphicsTextItem *title;
     QGraphicsTextItem *text_score;
     QGraphicsTextItem *editable_score;

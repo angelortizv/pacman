@@ -1,12 +1,11 @@
 #include "clyde.h"
 
 Clyde::Clyde(Compass *compass_ipt): Ghost (compass_ipt), compass(compass_ipt) {
-    loadPicture(":/pic/ghost/clyde/");
+    loadPicture(":/img/ghost/clyde/");
     setCritical(QPoint(27, 1));
     setInitDirection(Dir::Down);
     setMode(Mode::Home);
     setKind('c');
-
     tmr = new QTimer();
 }
 
@@ -14,13 +13,12 @@ QPoint Clyde::setTarget() {
     QPoint target;
     QPoint pos(int(y() - 35) / 16, int(x()) / 16);
     QPoint player = compass->getPlayerLoc();
-
     qreal dis = distance(pos, player);
-    if (dis > 128)
+    if (dis > 128){
         target = player;
-    else
-        // set to scatter point
+    } else{
         target = QPoint(27, 1);
+    }
     return target;
 }
 

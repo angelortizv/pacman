@@ -86,8 +86,12 @@ void Game::loadGameEntities(){
     scene->addItem(background);
     background->setZValue(1);
 
-    //Load UI
+    loadUI();
+    show();
+}
 
+void Game::loadUI(){
+    //Load UI
     title = new QGraphicsTextItem();
     title->setPlainText("PACMAN");
     title->setDefaultTextColor(Qt::yellow);
@@ -127,8 +131,6 @@ void Game::loadGameEntities(){
 
     refreshLives(board->getLives());
     refreshScore(board->getScore());
-
-    show();
 }
 
 void Game::keyPressEvent(QKeyEvent *event) {

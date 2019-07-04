@@ -8,22 +8,36 @@
 <h4 align="center">A PacMan clone written in C++ and Qt.</h4>
 
 <p align="center">
-  <a href="#prerequisites">Prerequisites</a> •
-  <a href="#download">Download</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#how-to-play">How to Play</a> •
+  <a href="#contribute">Contribute</a> •
   <a href="#credits">Credits</a> •
-  <a href="#license">License</a> •
+  <a href="#license">License</a> 
 </p>
 
 ![screenshot]()
 
-## Prerequisites
+
+## Installation
 
 
-## Download
+## How to Play?
+This pacman clone can be control using the arrows (`up`, `down`, `left` and `right`), also (`W`,`A`,`S` and `D`). To put the game in pause you must use the key `P`, likewise use the key `P` to resume the game
+
+## Contribute
 
 
 ## Credits
 
+## Authors
+
+* **Angelo Ortiz Vega** - *developer and ux designer* - [angelortizv](https://github.com/angelortizv)
 
 ## License
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE.md](https://github.com/angelortizv/pacman/blob/master/LICENSE) file for details
+
+<h1 align="center">
+  <a href=""><img src="https://res.cloudinary.com/dek4evg4t/image/upload/v1562055192/pac-man-logo-icon-512x512.png" width="50"></a>
+  <br>
+</h1>
  

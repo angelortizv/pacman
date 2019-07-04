@@ -25,6 +25,7 @@
 #include "game/entities/clyde.h"
 
 #include "gameover.h"
+#include "winner.h"
 
 class Game : public QGraphicsView
 {
@@ -78,6 +79,7 @@ private:
     void loadUI();
     void loadGameEntities();
     void refreshScore(int score);
+    void checkWinner();
 
     QGraphicsTextItem *title;
     QGraphicsTextItem *text_score;

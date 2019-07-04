@@ -41,7 +41,8 @@ SOURCES += \
         src/game/dashboard.cpp \
         src/game/entities/pellet.cpp \
         src/game/entities/dot.cpp \
-        src/game/button.cpp
+        src/game/button.cpp \
+    src/winner.cpp
 
 HEADERS += \
         src/mainwindow.h \
@@ -61,12 +62,14 @@ HEADERS += \
         src/game/entities/pellet.h \
         src/game/entities/item.h \
         src/game/entities/dot.h \
-        src/game/button.h
+        src/game/button.h \
+    src/winner.h
 
 FORMS += \
         src/mainwindow.ui \
         src/highscores.ui \
-        src/gameover.ui
+        src/gameover.ui \
+    src/winner.ui
 
 RESOURCES += \
         imgresources.qrc \

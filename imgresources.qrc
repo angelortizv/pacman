@@ -69,5 +69,6 @@
         <file>img/pacman/2.png</file>
         <file>img/cherry.png</file>
         <file>img/lives_0.png</file>
+        <file>img/winner_gif.gif</file>
     </qresource>
 </RCC>

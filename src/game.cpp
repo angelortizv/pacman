@@ -242,6 +242,7 @@ void Game::dotsAte() {
     board->addScore(10);
     refreshScore(board->getScore());
     remainDots --;
+    checkWinner();
 }
 
 void Game::pelletAte() {
@@ -253,6 +254,8 @@ void Game::pelletAte() {
     board->addScore(50);
     refreshScore(board->getScore());
     times = 0;
+
+    checkWinner();
 }
 
 void Game::afterGameStart(){
@@ -405,4 +408,13 @@ void Game::ghostKill(Ghost *ghost) {
 void Game::refreshScore(int score){
     editable_score->setPlainText(QString::number(board->getScore()));
     scene->addItem(editable_score);
+}
+
+void Game::checkWinner(){
+    if(remainDots == 0){
+        this->close();
+        Winner win;
+        win.setModal(true);
+        win.exec();
+    }
 }

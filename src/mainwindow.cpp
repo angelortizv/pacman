@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "winner.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -38,10 +39,6 @@ void MainWindow::on_highscores_button_clicked()
 void MainWindow::on_playgame_button_clicked()
 {
     close();
-//    Game game;
-//    game.setModal(true);
-//    game.exec();
-
     Game *game = new Game();
     game->afterGameStart();
     game->show();
@@ -50,4 +47,11 @@ void MainWindow::on_playgame_button_clicked()
 void MainWindow::on_quit_button_clicked()
 {
     this->close();
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    Winner win;
+    win.setModal(true);
+    win.exec();
 }

@@ -16,7 +16,13 @@
   <a href="#license">License</a> 
 </p>
 
-![screenshot]()
+
+ 
+ Welcome Window             | Principal Window (PACMAN) | Game Over Window          |
+ :-------------------------:|:-------------------------:|:-------------------------:|
+ ![](https://res.cloudinary.com/dek4evg4t/image/upload/v1562267062/ezgif.com-video-to-gif.gif)      | ![](https://res.cloudinary.com/dek4evg4t/image/upload/v1562267184/ezgif.com-video-to-gif_1.gif)     |![](https://res.cloudinary.com/dek4evg4t/image/upload/v1562268476/ezgif.com-video-to-gif_2.gif)      |
+ 
+ 
 
 ## Motivation
 

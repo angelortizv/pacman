@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>448</width>
     <height>600</height>
    </rect>
   </property>
@@ -23,7 +23,7 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>800</width>
+      <width>448</width>
       <height>600</height>
      </rect>
     </property>
@@ -37,7 +37,7 @@
    <widget class="QLabel" name="logo_label">
     <property name="geometry">
      <rect>
-      <x>230</x>
+      <x>60</x>
       <y>20</y>
       <width>331</width>
       <height>121</height>
@@ -53,7 +53,7 @@
    <widget class="QLabel" name="initial_gif_label">
     <property name="geometry">
      <rect>
-      <x>190</x>
+      <x>20</x>
       <y>170</y>
       <width>411</width>
       <height>81</height>
@@ -69,7 +69,7 @@
    <widget class="QLabel" name="developer_label">
     <property name="geometry">
      <rect>
-      <x>280</x>
+      <x>120</x>
       <y>560</y>
       <width>241</width>
       <height>20</height>
@@ -86,9 +86,9 @@ color: rgb(255, 255, 255);</string>
    <widget class="QPushButton" name="playgame_button">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>330</y>
-      <width>181</width>
+      <x>135</x>
+      <y>300</y>
+      <width>191</width>
       <height>61</height>
      </rect>
     </property>
@@ -103,8 +103,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QPushButton" name="highscores_button">
     <property name="geometry">
      <rect>
-      <x>297</x>
-      <y>390</y>
+      <x>135</x>
+      <y>360</y>
       <width>191</width>
       <height>61</height>
      </rect>
@@ -121,8 +121,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QPushButton" name="quit_button">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>440</y>
+      <x>135</x>
+      <y>410</y>
       <width>191</width>
       <height>61</height>
      </rect>

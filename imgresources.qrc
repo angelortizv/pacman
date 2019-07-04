@@ -68,5 +68,6 @@
         <file>img/pacman/1.png</file>
         <file>img/pacman/2.png</file>
         <file>img/cherry.png</file>
+        <file>img/lives_0.png</file>
     </qresource>
 </RCC>

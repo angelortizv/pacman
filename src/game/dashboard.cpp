@@ -23,12 +23,12 @@ int Dashboard::getHighScore() {
     return high;
 }
 
-int Dashboard::getLives() const
+int Dashboard::getLifes() const
 {
-    return lives;
+    return lifes;
 }
 
-void Dashboard::setLives(int value)
+void Dashboard::setLifes(int value)
 {
-    lives = value;
+    lifes = value;
 }

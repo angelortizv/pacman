@@ -20,13 +20,13 @@ public:
     int getScore();
     int getHighScore();
 
+    int getLifes() const;
+    void setLifes(int value);
 
-    int getLives() const;
-    void setLives(int value);
+    int lifes = 3;
 
 private:
     int score, high;
-    int lives;
     QGraphicsTextItem *text_score;
     QGraphicsTextItem *text_high;
 

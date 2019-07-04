@@ -67,10 +67,10 @@ void Game::loadGameEntities(){
     connect(ghostMove, SIGNAL(timeout()), inky, SLOT(move()));
     connect(ghostMove, SIGNAL(timeout()), clyde, SLOT(move()));
 
-    connect(blinky, SIGNAL(fail()), this, SLOT(gameFail()));
-    connect(pinky, SIGNAL(fail()), this, SLOT(gameFail()));
-    connect(inky, SIGNAL(fail()), this, SLOT(gameFail()));
-    connect(clyde, SIGNAL(fail()), this, SLOT(gameFail()));
+    connect(blinky, SIGNAL(fail()), this, SLOT(lifesManager()));
+    connect(pinky, SIGNAL(fail()), this, SLOT(lifesManager()));
+    connect(inky, SIGNAL(fail()), this, SLOT(lifesManager()));
+    connect(clyde, SIGNAL(fail()), this, SLOT(lifesManager()));
 
     connect(blinky, SIGNAL(collide(Ghost *)), this, SLOT(ghostKill(Ghost *)));
     connect(pinky, SIGNAL(collide(Ghost *)), this, SLOT(ghostKill(Ghost *)));
@@ -119,9 +119,11 @@ void Game::loadUI(){
     editable_score->setFont(QFont(font_family, font_size_2));
     editable_score->setPos(105,538);
 
-    editable_lives = new QGraphicsPixmapItem();
-    editable_lives->setScale(0.20);
-    editable_lives->setPos(288, 538);
+    editable_lifes = new QGraphicsPixmapItem();
+    editable_lifes->setScale(0.20);
+    editable_lifes->setPos(288, 538);
+    editable_lifes->setPixmap(QPixmap(":/img/lives_3.png"));
+    scene->addItem(editable_lifes);
 
     editable_cherry = new QGraphicsPixmapItem();
     editable_cherry->setPixmap(QPixmap(":/img/cherry.png"));
@@ -129,12 +131,11 @@ void Game::loadUI(){
     editable_cherry->setPos(390, 538);
     scene->addItem(editable_cherry);
 
-    refreshLives(board->getLives());
     refreshScore(board->getScore());
 
     get_ready = new QGraphicsTextItem();
     get_ready->setPlainText("GET READY!");
-    get_ready->setDefaultTextColor(Qt::white);
+    get_ready->setDefaultTextColor(Qt::yellow);
     get_ready->setFont(QFont(font_family, font_size_3));
     get_ready->setPos(152,300);
 
@@ -205,10 +206,10 @@ void Game::resume() {
 }
 
 void Game::dotsAte() {
-    QMediaPlayer* eatDotMusic = new QMediaPlayer;
-    eatDotMusic->setMedia(QUrl("qrc:/audio/pacman_simple_homp.wav"));
-    eatDotMusic->setVolume(100);
-    eatDotMusic->play();
+//    QMediaPlayer* eatDotMusic = new QMediaPlayer;
+//    eatDotMusic->setMedia(QUrl("qrc:/audio/pacman_simple_homp.wav"));
+//    eatDotMusic->setVolume(100);
+//    eatDotMusic->play();
 
 
     board->addScore(10);
@@ -229,10 +230,10 @@ void Game::pelletAte() {
 }
 
 void Game::afterGameStart(){
-    QMediaPlayer* openning = new QMediaPlayer;
-    openning->setMedia(QUrl("qrc:/audio/pacman_beginning.wav"));
-    openning->setVolume(100);
-    openning->play();
+//    QMediaPlayer* openning = new QMediaPlayer;
+//    openning->setMedia(QUrl("qrc:/audio/pacman_beginning.wav"));
+//    openning->setVolume(100);
+//    openning->play();
 
     scene->addItem(get_ready);
 
@@ -248,7 +249,6 @@ void Game::gameStart() {
 
     if (mode == Mode::Result)
         background->fadeOut();
-
 
     // change mode
     mode = Mode::Play;
@@ -284,14 +284,42 @@ void Game::gameStart() {
     wait(0.5);
 }
 
+void Game::lifesManager(){
+    board->lifes--;
+
+    switch (board->getLifes()) {
+    case 3:
+        editable_lifes->setPixmap(QPixmap(":/img/lives_3.png"));
+        wait(0.5);
+        break;
+    case 2:
+        editable_lifes->setPixmap(QPixmap(":/img/lives_2.png"));
+        wait(0.5);
+        break;
+    case 1:
+        editable_lifes->setPixmap(QPixmap(":/img/lives_1.png"));
+        wait(0.5);
+        break;
+    case 0:
+        editable_lifes->setPixmap(QPixmap(":/img/lives_0.png"));
+        wait(0.5);
+        gameFail();
+        break;
+    default:
+        editable_lifes->setPixmap(QPixmap(":/img/lives_3.png"));
+        wait(0.5);
+        break;
+    }
+}
+
 void Game::gameFail() {
     disconnect(lag, SIGNAL(timeout()), this, SLOT(countDown()));
 
-    QMediaPlayer* fail = new QMediaPlayer;
-    fail->setMedia(QUrl("qrc:/audio/pacman_death.wav"));
-    fail->setVolume(100);
-    fail->play();
-
+//    QMediaPlayer* fail = new QMediaPlayer;
+//    fail->setMedia(QUrl("qrc:/audio/pacman_death.wav"));
+//    fail->setVolume(100);
+//    fail->play();
+    get_ready->setPlainText("You lose!");
     player->die();
     clearDots();
     background->fadeIn();
@@ -333,10 +361,10 @@ void Game::countDown() {
 }
 
 void Game::ghostKill(Ghost *ghost) {
-    QMediaPlayer* killer = new QMediaPlayer;
-    killer->setMedia(QUrl("qrc:/audio/pacman_eatghost.wav"));
-    killer->setVolume(100);
-    killer->play();
+//    QMediaPlayer* killer = new QMediaPlayer;
+//    killer->setMedia(QUrl("qrc:/audio/pacman_eatghost.wav"));
+//    killer->setVolume(100);
+//    killer->play();
 
     wait(0.5);
     player->hide();
@@ -347,25 +375,4 @@ void Game::ghostKill(Ghost *ghost) {
 void Game::refreshScore(int score){
     editable_score->setPlainText(QString::number(board->getScore()));
     scene->addItem(editable_score);
-}
-
-void Game::refreshLives(int lives){
-    switch (lives) {
-    case 3:
-        editable_lives->setPixmap(QPixmap(":/img/lives_3.png"));
-        scene->addItem(editable_lives);
-        break;
-    case 2:
-        editable_lives->setPixmap(QPixmap(":/img/lives_2.png"));
-        scene->addItem(editable_lives);
-        break;
-    case 1:
-        editable_lives->setPixmap(QPixmap(":/img/lives_1.png"));
-        scene->addItem(editable_lives);
-        break;
-    default:
-        editable_lives->setPixmap(QPixmap(":/img/lives_3.png"));
-        scene->addItem(editable_lives);
-        break;
-    }
 }

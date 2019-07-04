@@ -62,7 +62,7 @@ public slots:
     void afterGameStart();
     void gameStart();
     void gameFail();
-
+    void lifesManager();
 
 private slots:
     void stopAndShutdown();
@@ -78,14 +78,13 @@ private:
     void loadUI();
     void loadGameEntities();
     void refreshScore(int score);
-    void refreshLives(int lives);
 
     QGraphicsTextItem *title;
     QGraphicsTextItem *text_score;
     QGraphicsTextItem *editable_score;
     QGraphicsTextItem *text_lives;
     QGraphicsTextItem *get_ready;
-    QGraphicsPixmapItem *editable_lives;
+    QGraphicsPixmapItem *editable_lifes;
     QGraphicsPixmapItem *editable_cherry;
 
     const int width = 448;

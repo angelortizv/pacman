@@ -5,6 +5,7 @@
 #include <QMovie>
 #include "mainwindow.h"
 #include "highscores.h"
+#include "game/dashboard.h"
 
 namespace Ui {
 class GameOver;
@@ -17,6 +18,7 @@ class GameOver : public QDialog
 public:
     explicit GameOver(QWidget *parent = 0);
     ~GameOver();
+    Dashboard *board;
 
 private slots:
     void on_goback_button_clicked();
@@ -26,7 +28,7 @@ private slots:
 private:
     Ui::GameOver *ui;
     static const int font_size = 15;
-    static const int font_size_2 = 8;
+    static const int font_size_2 = 10;
     const QString font_family = "Joystix";
     void loadUI();
 };

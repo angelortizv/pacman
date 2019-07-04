@@ -5,15 +5,21 @@
 
 Game::Game()
 {
+    this->setWindowTitle("Game | Pacman");
+    this->setWindowIcon(QPixmap(":/img/pacman/1.png"));
+    this->setFixedSize(width+5, 600);
     loadUI();
     loadGameEntities();
 }
 
 void Game::loadUI(){
-//    QFontDatabase::addApplicationFont(":/font/pixel.ttf");
-//    ui->scoreCounter->setFont(QFont(font_family, font_size));
-//    ui->label_lives->setFont(QFont(font_family, font_size));
-//    ui->label_score->setFont(QFont(font_family, font_size));
+    QFontDatabase::addApplicationFont(":/font/pixel.ttf");
+//    text_score = new QGraphicsTextItem();
+//    text_score->setPlainText("SCORE");
+//    text_score->setDefaultTextColor(Qt::white);
+//    text_score->setFont(QFont(font_family, font_size));
+//    text_score->setPos(224,0);
+
 }
 
 void Game::loadGameEntities(){
@@ -91,19 +97,34 @@ void Game::loadGameEntities(){
     scene->addItem(background);
     background->setZValue(1);
 
+    //Load UI
+    text_score = new QGraphicsTextItem();
+    text_score->setPlainText("SCORE");
+    text_score->setDefaultTextColor(Qt::white);
+    text_score->setFont(QFont(font_family, font_size));
+    text_score->setPos(0,530);
+    scene->addItem(text_score);
+
+    editable_score = new QGraphicsTextItem();
+    editable_score->setPlainText(QString::number(board->getScore()));
+    editable_score->setDefaultTextColor(Qt::white);
+    editable_score->setFont(QFont(font_family, font_size));
+    editable_score->setPos(120,530);
+
+    refreshScore(board->getScore());
+
     show();
 }
 
-
 void Game::keyPressEvent(QKeyEvent *event) {
     if (mode == Mode::Play) {
-        if (event->key() == Qt::Key_Up)
+        if ((event->key() == Qt::Key_Up) || (event->key() == Qt::Key_W))
             player->setDirection(Dir::Up);
-        else if (event->key() == Qt::Key_Down)
+        else if ((event->key() == Qt::Key_Down)|| (event->key() == Qt::Key_S))
             player->setDirection(Dir::Down);
-        else if (event->key() == Qt::Key_Left)
+        else if ((event->key() == Qt::Key_Left) || (event->key() == Qt::Key_A))
             player->setDirection(Dir::Left);
-        else if (event->key() == Qt::Key_Right)
+        else if ((event->key() == Qt::Key_Right) || (event->key() == Qt::Key_D))
             player->setDirection(Dir::Right);
     }
 }
@@ -162,11 +183,13 @@ void Game::resume() {
 
 void Game::dotsAte() {
     board->addScore(10);
+    refreshScore(board->getScore());
     remainDots --;
 }
 
 void Game::pelletAte() {
     board->addScore(50);
+    refreshScore(board->getScore());
     times = 0;
 }
 
@@ -247,4 +270,9 @@ void Game::ghostKill(Ghost *ghost) {
     player->hide();
     ghost->setPixmap(QPixmap(":/img/item/score/" + QString::number(times) + ".png").scaledToHeight(32));
     board->addScore(int(pow(2, ++ times) * 100));
+}
+
+void Game::refreshScore(int score){
+    editable_score->setPlainText(QString::number(board->getScore()));
+    scene->addItem(editable_score);
 }

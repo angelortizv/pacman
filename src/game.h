@@ -67,6 +67,9 @@ private:
     const QString font_family = "Joystix";
     void loadUI();
     void loadGameEntities();
+    void refreshScore(int score);
+    QGraphicsTextItem *text_score;
+    QGraphicsTextItem *editable_score;
 
     const int width = 448;
     const int height = 564;

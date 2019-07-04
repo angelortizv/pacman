@@ -1,4 +1,5 @@
 #include "dashboard.h"
+#include <QDebug>
 
 Dashboard::Dashboard(QObject *parent): QObject (parent) {
     // initialize the score data
@@ -32,6 +33,9 @@ void Dashboard::addScore(int ipt) {
 
     text_high->setPos(224 - text_high->boundingRect().width() / 2, 0);
     text_score->setPos(448 - text_score->boundingRect().width() - 10, 0);
+
+
+    text_score->setPos(0,0);
 }
 
 void Dashboard::reset() {

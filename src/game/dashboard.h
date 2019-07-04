@@ -6,6 +6,7 @@
 #include <QGraphicsTextItem>
 #include <QFontDatabase>
 #include <algorithm>
+#include <QLabel>
 
 using std::max;
 

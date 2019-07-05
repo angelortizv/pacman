@@ -46,7 +46,8 @@ Prerequisites: You must have [Git](https://git-scm.com/book/es/v2/Inicio---Sobre
 9. Click on `pacman.pro` to open the project.
 
 ## How to Play?
-This pacman clone can be control using the arrows (`up`, `down`, `left` and `right`), also (`W`,`A`,`S` and `D`). To put the game in pause you must use the key `P`, likewise use the key `P` to resume the game
+This pacman clone can be control using the arrows <kbd>&leftarrow;</kbd> / <kbd>&rightarrow;</kbd> / <kbd>&uparrow;</kbd> / <kbd>&downarrow;</kbd>, also <kbd>W</kbd> / <kbd>A</kbd> / <kbd>S</kbd> / <kbd>D</kbd>. To put the game in pause you must use the key <kbd>P</kbd>, likewise use the key <kbd>P</kbd> to resume the game
+
 
 ## Contribute
 
